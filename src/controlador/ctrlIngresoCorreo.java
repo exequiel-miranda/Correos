@@ -23,11 +23,15 @@ public class ctrlIngresoCorreo implements MouseListener{
     public void mouseClicked(MouseEvent e) {
         
         if(e.getSource() == vista.btnEnviarCodigo){
-             String recipient = "exequiel.miranda314@gmail.com";
-        String subject = "Asunto del correo";
-        String content = "Este es el contenido del correo.";
         
+            
+            
+            String recipient = vista.txtCorreo.getText();
+        String subject = "Recuperacion de contraseña";
+        String content = "Este es el codigo de recuperacion";
+     
             EnviarCorreo.enviarCorreo(recipient, subject, content);
+        
         }
         
     }

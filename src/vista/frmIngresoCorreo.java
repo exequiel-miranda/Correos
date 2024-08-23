@@ -49,6 +49,11 @@ public class frmIngresoCorreo extends javax.swing.JFrame {
 
         btnEnviarCodigo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnEnviarCodigo.setText("Enviar código de recuperación");
+        btnEnviarCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnviarCodigoActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnEnviarCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 300, 50));
 
         txtCorreo.setToolTipText("");
@@ -68,6 +73,10 @@ public class frmIngresoCorreo extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEnviarCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarCodigoActionPerformed
+        
+    }//GEN-LAST:event_btnEnviarCodigoActionPerformed
 
     /**
      * @param args the command line arguments
