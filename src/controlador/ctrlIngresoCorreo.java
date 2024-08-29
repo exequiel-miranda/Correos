@@ -2,6 +2,8 @@ package controlador;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Random;
+import java.util.UUID;
 import modelo.Credenciales;
 import modelo.EnviarCorreo;
 import vista.frmIngresoCorreo;
@@ -24,14 +26,17 @@ public class ctrlIngresoCorreo implements MouseListener{
         
         if(e.getSource() == vista.btnEnviarCodigo){
         
-            
-            
-            String recipient = vista.txtCorreo.getText();
-        String subject = "Recuperacion de contraseña";
-        String content = "Este es el codigo de recuperacion";
-     
-            EnviarCorreo.enviarCorreo(recipient, subject, content);
+             Random random = new Random();
         
+        // Genera un número aleatorio de 4 dígitos (1000 a 9999)
+            int numeroAleatorio = 1000 + random.nextInt(9000);
+
+            String recipient = vista.txtCorreo.getText();
+            String subject = "Recuperacion de contraseña";
+            String content = "Este es el codigo de recuperacion" + numeroAleatorio;
+
+            EnviarCorreo.enviarCorreo(recipient, subject, content);
+
         }
         
     }
